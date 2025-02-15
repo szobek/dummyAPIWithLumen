@@ -2,9 +2,14 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use App\Models\settings;
 
 class SettingsController extends Controller
 {
-    //
+    public function getSettings()
+    {
+        $data = settings::all()->toArray();
+       
+        return $data; 
+    }
 }
